@@ -1,27 +1,39 @@
 import java.util.ArrayList;
 
 /**
- A set of coins.
+ * A set of coins.
  */
-public class CoinSet
-{
+public class CoinSet {
     private ArrayList<Coin> set;
 
     /**
-     Constructs a CoinSet object.
+     * Constructs a CoinSet object.
      */
-    public CoinSet()
-    {
+    public CoinSet() {
         set = new ArrayList<Coin>();
 
     }
 
-    public  double counter() {
+    public void addCoin(Coin c) {
+        set.add(c);
+    }
+
+    public double totalCoin() {
+        double total = 0;
+        for (Coin i : set
+        ) {
+            total += i.getValue();
+        }
+        return total;
+    }
+
+    public double counter() {
         double sum = 0;
         for (int i = 0; i < set.size(); i++) {
-             sum += set.get(i).getValue();
+            sum += set.get(i).getValue();
         }
-                return sum ;
+        return sum;
 
     }
+
 }

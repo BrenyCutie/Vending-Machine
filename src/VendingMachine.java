@@ -43,15 +43,26 @@ public class VendingMachine {
         }
         return ans;
     }
-        public void buyProduct (Product p ){
-                if (products.contains(p) && Coin > p.getPrice()) {
-                    products.remove(finder(p));
-                    coins.counter() -= p.getPrice();
-                }
-            }
+
+    public void buyProduct(Product p) {
+        if (products.contains(p) && currentCoins.totalCoin() > p.getPrice()) {
+            products.remove(finder(p));
+        }
+    }
 
     public void addCoin(Coin choice) {
+        double in = 0;
+         currentCoins.addCoin(choice);
+        currentCoins.totalCoin() ;
+        currentCoins.counter();
+    }
 
+
+    public double removeMoney() {
+        double bye = 0;
+        bye = currentCoins.counter() - currentCoins.counter();
+
+        return bye;
     }
 }
 

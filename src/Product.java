@@ -1,20 +1,19 @@
 import java.util.ArrayList;
 
 /**
- A product in a vending machine.
+ * A product in a vending machine.
  */
-public class Product
-{
+public class Product {
     private String description;
     private double price;
 
     /**
-     Constructs a Product object
-     @param aDescription the description of the product
-     @param aPrice the price of the product
+     * Constructs a Product object
+     *
+     * @param aDescription the description of the product
+     * @param aPrice       the price of the product
      */
-    public Product(String aDescription, double aPrice)
-    {
+    public Product(String aDescription, double aPrice) {
         description = aDescription;
         price = aPrice;
 
@@ -26,5 +25,12 @@ public class Product
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public String toString() {
+        return "Product - " +
+                "description = " + description + '\'' +
+                " price = " + price;
     }
 }
