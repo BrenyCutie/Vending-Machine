@@ -8,16 +8,9 @@ public class vender {
     private double change;
     private int[] stock = new int[9];
 
-    public vender(String maker, double change) {
-        this.change = change;
-        this.maker = maker;
-    }
-
-    public double checkPrice(int product) {
-
-        HashMap<Integer, Double> map = new HashMap<>();
-        //location , price
-        map.put(1, 1.00);
+    private    HashMap<Integer, Double> map = new HashMap<>();
+    //location , price
+    {  map.put(1, 1.00);
         map.put(2, 2.00);
         map.put(3, 3.00);
 
@@ -27,7 +20,15 @@ public class vender {
 
         map.put(7, 7.00);
         map.put(8, 8.00);
-        map.put(9, 9.00);
+        map.put(9, 9.00);}
+
+    public vender(String maker, double change) {
+        this.change = change;
+        this.maker = maker;
+    }
+
+    public double checkPrice(int product) {
+
 
         Iterator iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {

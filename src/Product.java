@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  A product in a vending machine.
  */
@@ -5,7 +7,7 @@ public class Product
 {
     private String description;
     private double price;
-    private String[] list = new String[9];
+
     /**
      Constructs a Product object
      @param aDescription the description of the product
@@ -15,6 +17,14 @@ public class Product
     {
         description = aDescription;
         price = aPrice;
+
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

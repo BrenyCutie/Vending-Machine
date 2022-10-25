@@ -13,6 +13,15 @@ public class CoinSet
     public CoinSet()
     {
         set = new ArrayList<Coin>();
+
     }
 
+    public  double counter() {
+        double sum = 0;
+        for (int i = 0; i < set.size(); i++) {
+             sum += set.get(i).getValue();
+        }
+                return sum ;
+
+    }
 }

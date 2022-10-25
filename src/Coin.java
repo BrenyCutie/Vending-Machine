@@ -17,5 +17,11 @@ public class Coin
         name = aName;
     }
 
-    //ADD REMAINING CODE HERE
+    public String getName() {
+        return name;
+    }
+
+    public double getValue() {
+        return value;
+    }
 }
