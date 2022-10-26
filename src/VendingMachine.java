@@ -47,22 +47,17 @@ public class VendingMachine {
     public void buyProduct(Product p) {
         if (products.contains(p) && currentCoins.totalCoin() > p.getPrice()) {
             products.remove(finder(p));
+
         }
     }
 
     public void addCoin(Coin choice) {
-        double in = 0;
          currentCoins.addCoin(choice);
-        currentCoins.totalCoin() ;
-        currentCoins.counter();
     }
 
 
-    public double removeMoney() {
-        double bye = 0;
-        bye = currentCoins.counter() - currentCoins.counter();
-
-        return bye;
+    public String removeMoney() {
+        return currentCoins.toString();
     }
 }
 
