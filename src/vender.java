@@ -43,8 +43,8 @@ public class vender {
             minusStock(item, 1);
 
             return true;
-        }
-        return false;
+        }                throw new VendingException("Inssufficient funds");
+
     }
     public String minusStock(int item, int amount) {
         stock[item] = stock[item] - amount;

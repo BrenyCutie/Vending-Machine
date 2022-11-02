@@ -14,6 +14,7 @@ public class CoinSet {
 
     }
 
+
     public void addCoin(Coin c) {
         set.add(c);
     }
@@ -27,13 +28,13 @@ public class CoinSet {
         return total;
     }
 
-    public double counter() {
-        double sum = 0;
-        for (int i = 0; i < set.size(); i++) {
-            sum += set.get(i).getValue();
-        }
-        return sum;
-
+    public void empty() {
+        set.clear();
     }
 
+
+
+    public ArrayList<Coin> getSet() {
+        return set;
+    }
 }
