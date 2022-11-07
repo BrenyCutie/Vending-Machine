@@ -24,32 +24,33 @@ public class VendingMachine {
     }
 
 
-
-
-        public Product[] getProductTypes() {
-            Product[] getter = new Product[products.size()];
-            for (int i = 0; i < getter.length; i++) {
-                getter[i] = products.get(i);
-            }
-            return getter;
+    public Product[] getProductTypes() {
+        ArrayList<Product> getter = new ArrayList<Product>();
+        for (Product p: products) {
+            if(!getter.contains(p)){
+                getter.add(p);
         }
-
-
+        }
+        Product[] visible = new Product[getter.size()];
+            for (Product x :getter) {
+                visible[getter.indexOf(x)] = x;
+            }
+            return visible;
+    }
 
 
 
     public void buyProduct(Product p) {
         ArrayList<Coin> in = currentCoins.getSet();
         for (Coin c : in) {
-            coins.addCoin(c);
-            if (products.contains(p) && coins.totalCoin() >= p.getPrice()) {
-                products.remove(p);
-            } else {
-                throw new VendingException("Inssufficient funds");
+            coins.addCoin(c);}
+        if (products.contains(p) && currentCoins.totalCoin() >= p.getPrice()) {
+            products.remove(p);
+        } else {
+            throw new VendingException("Insufficient funds");
 
-            }
         }
-            currentCoins.empty();
+        currentCoins.empty();
     }
 
     public void addCoin(Coin choice) {
