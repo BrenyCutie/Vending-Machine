@@ -19,6 +19,8 @@ public class CoinSet {
         set.add(c);
     }
 
+
+    //calculate total of coins
     public double totalCoin() {
         double total = 0;
         for (Coin i : set
@@ -31,7 +33,6 @@ public class CoinSet {
     public void empty() {
         set.clear();
     }
-
 
 
     public ArrayList<Coin> getSet() {

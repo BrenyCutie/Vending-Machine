@@ -13,6 +13,8 @@ public class Product {
      * @param aDescription the description of the product
      * @param aPrice       the price of the product
      */
+
+    //constructor
     public Product(String aDescription, double aPrice) {
         description = aDescription;
         price = aPrice;
